@@ -20,6 +20,11 @@ $(() => {
             $("#region").text(region)
             $("#population").text(population)
 
+            $(".mapouter").html(`<iframe width="100%" height="250"
+            src="https://maps.google.com/maps?q=${capital}=&z=13&ie=UTF8&iwloc=&output=embed"
+            frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+        </iframe>`)
+
             $("#time-zone").text(timezones)
             $('#flag').css({'background-image':`url(${flags.svg})`,'background-size':'cover'})
             $("#callingCode").html(`<h2>${callingCodes}</h2>`)

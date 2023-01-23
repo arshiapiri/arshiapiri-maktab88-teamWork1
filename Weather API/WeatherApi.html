@@ -37,8 +37,8 @@
     <div class="container-xl mt-3 my-3">
         <div class="row gy-4">
             <div class="col-lg-4 col-md-6 col-12">
-                <div class="card shadow">
-                    <div class="mapouter">
+                <div class="card shadow ps-2">
+                    <div>
                         <h4 ><span>Country:  </span> <span id="country" >---</span></h4>
                         <p><span>Native Name:  </span> <span id="NativeName" >---</span></p>
                         <p><span>Capital:  </span> <span id="capital" >---</span></p>
@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-12">
-                <div class="card shadow box">
+                <div class="card shadow ps-2">
                     <h4>capital weather report</h4>
                     <img src="./2262130.jpg" alt="" style="height: 60px;">
                     <h4 ><span>wind speeed:  </span> <span id="windSpeed">---</span></h4>
@@ -66,17 +66,13 @@
             <div class="col-lg-8 col-md-6 col-12" id="mapBody">
                 <div class="card shadow">
                     <div class="mapouter">
-                        <iframe width="100%" height="250"
-                            src="https://maps.google.com/maps?q=tehran=&z=13&ie=UTF8&iwloc=&output=embed"
-                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-                        </iframe>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-12">
-                <div class="card shadow " style="height:100%; width: 100%;">
-                    <h2 style="background-color: rgb(167, 167, 167);">calling code</h2>
-                    <p id="callingCode"></p>
+                <div class="card shadow bg-primary" style="height:100%; width: 100%;">
+                    <h2 class="codeNumber">calling code</h2>
+                    <p id="callingCode" class="d-flex justify-content-center align-items-center"></p>
                 </div>
             </div>
         </div>
