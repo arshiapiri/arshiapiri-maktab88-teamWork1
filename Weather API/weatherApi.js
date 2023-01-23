@@ -70,7 +70,7 @@ $(() => {
             $("#region").text(region)
             $("#population").text(population)
             $("#time-zone").text(timezones)
-            $("#flag").append(`<img src="${flag.svg}" style="height:100%;width:100%">`)
+            $('#flag').css({'background-image':`url(${flags.svg})`,'background-size':'cover'})
             $.get(
               `https://api.openweathermap.org/data/2.5/weather?q=${capital.toString()}&APPID=3ef5728414414623794036f295042ac2`,function(weatherData,status){
                 $("#")

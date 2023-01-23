@@ -6,3 +6,9 @@
     background-image: url("./2262130.jpg");
     background-color: #cccccc;
   }
+  #flag{
+   height: 350px;
+   background-position: center;
+   background-repeat: none;
+   background-size: cover;
+   }
