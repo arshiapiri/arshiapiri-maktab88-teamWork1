@@ -26,8 +26,6 @@
                 <select id="selected"  class=" form-select" aria-label="Default select example">
                     <option selected>--- Choose  Country ---</option>
                     <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
                   </select>
                 </div>
             </div>
@@ -35,20 +33,45 @@
     </div>
     <!-- Nav Bar End -->
     <div class="container-xl mt-3 my-3" id="flag">
-        <div class="row gy-4" id="usersList">
-            <div class="col-lg-9 col-md-6 col-12">
+        <div class="row gy-4">
+            <div class="col-lg-4 col-md-6 col-12">
                 <div class="card shadow">
-                    <div class="mapouter"><iframe width="100%" height="300" id="gmap_canvas"
-                            src="https://maps.google.com/maps?q=tehran,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-                        </iframe>
+                    <div class="mapouter">
+                        <h4>country</h4>
+                        <p>capital:--</p>
+                        <p>region:--</p>
+                        <p>population:--</p>
+                        <p>Languages:--</p>
+                        <p>TimeZone:--</p>
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-3 col-md-6 col-12">
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="card shadow box">
+                    <h4>capital weather report</h4>
+                    <img src="./2262130.jpg" alt="" style="height: 60px;">
+                    <p>wind speeed:--</p>
+                    <p>temperature:--</p>
+                    <p>humidity:--</p>
+                    <p>visibility:--</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
                 <div class="card shadow">
-                    
+                    flag
+                </div>
+                <div class="card shadow">
+                    calling code
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-6 col-12" id="mapBody">
+                <div class="card shadow">
+                    <div class="mapouter">
+                        <iframe width="100%" height="250"
+                            src="https://maps.google.com/maps?q=tehran=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </div>
