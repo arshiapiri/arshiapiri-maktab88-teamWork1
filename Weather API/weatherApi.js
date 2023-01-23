@@ -12,7 +12,13 @@ $.ajax({
             countries.push(res[i]["name"]["common"]);
             capital.push(res[i]["capital"])
             $("#capital").html(`
-                <p>capital:${capital[0]}</p>`
+            <p id="capital">capital:${("#selected").val()}</p>`
+            )
+            $("#mapBody").html(
+                `<iframe width="100%" height="250"
+                src="https://maps.google.com/maps?q=${res[0]["capital"]}"}=&z=13&ie=UTF8&iwloc=&output=embed"
+                frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+            </iframe>`
             )
         } 
     },

@@ -24,7 +24,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <select id="selected"  class=" form-select" aria-label="Default select example">
-                    <option selected>--- Choose  Country ---</option>
+                    <option selected id="w"></option>
                     <option value="1">One</option>
                   </select>
                 </div>
@@ -36,9 +36,9 @@
         <div class="row gy-4">
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="card shadow">
-                    <div class="mapouter">
+                    <div class="mapouter" id="capital">
                         <h4>country</h4>
-                        <p id="capital">capital:--</p>
+                        <p>capital:--</p>
                         <p>region:--</p>
                         <p>population:--</p>
                         <p>Languages:--</p>
@@ -64,9 +64,9 @@
                     calling code
                 </div>
             </div>
-            <div class="col-lg-12 col-md-6 col-12" id="mapBody">
+            <div class="col-lg-12 col-md-6 col-12">
                 <div class="card shadow">
-                    <div class="mapouter">
+                    <div class="mapouter" id="mapBody">
                         <iframe width="100%" height="250"
                             src="https://maps.google.com/maps?q=tehran=&z=13&ie=UTF8&iwloc=&output=embed"
                             frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
