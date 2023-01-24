@@ -13,23 +13,25 @@
 </head>
 
 <body>
-    <!-- Nav Bar Start  -->
-    <div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-Secondary">
-            <div class="container-fluid">
-                <button><a href="#"><i class="fa-solid fa-sun"></i></a></button>
-                <button><a href="#"><i class="fa-solid fa-moon"></i></a></button>
-                <!--start: Select Country Box-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navBar">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-md-2 mt-lg-0">
+                <div class="theme-container shadow-dark">
+                    <img id="theme-icon"    src="https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg" alt="ERR">
+                  </div>
+            </ul>
+            <form class="d-flex">
                 <select id="selector" class=" form-select" aria-label="Default select example">
                     <option selected>--- Choose Country ---</option>
                 </select>
-                <!--end: Select Country Box-->
-
-            </div>
-    </div>
-    </nav>
-    </div>
-    <!-- Nav Bar End -->
+            </form>
+          </div>
+        </div>
+      </nav>
     <div class="container-xxl mt-3 my-3 main-content">
         <div class="row gy-4 align-items-stretch">
             <div class="col-lg-4 col-md-6 col-12">
