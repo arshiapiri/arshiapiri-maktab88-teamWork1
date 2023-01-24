@@ -17,12 +17,8 @@
     <div>
         <nav class="navbar navbar-expand-lg navbar-dark bg-Secondary">
             <div class="container-fluid">
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <button><a href="#"><i class="fa-solid fa-sun"></i></a></button>
+                <button><a href="#"><i class="fa-solid fa-moon"></i></a></button>
                 <!--start: Select Country Box-->
                 <select id="selector" class=" form-select" aria-label="Default select example">
                     <option selected>--- Choose Country ---</option>
@@ -35,7 +31,7 @@
     </div>
     <!-- Nav Bar End -->
     <div class="container-xxl mt-3 my-3 main-content">
-        <div class="row gy-4 align-items-strech">
+        <div class="row gy-4 align-items-stretch">
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="card shadow ps-2" id="box">
                     <div>
@@ -53,6 +49,7 @@
                 <div class="card shadow ps-3 boxWeather" id="box">
                     <h4 class="py-3">capital weather report</h4>
                     <div class="py-3">
+                        <div id="icon"></div>
                         <h4><span class="fontSpan">wind speeed: </span> <span id="windSpeed">---</span></h4>
                         <p><span class="fontSpan">temperature: </span> <span id="temperature">---</span></p>
                         <p><span class="fontSpan">humidity: </span> <span id="humidity">---</span></p>

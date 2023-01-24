@@ -18,8 +18,8 @@ $(() => {
           $("#NativeName").text(nativeName);
           $("#capital").text(capital);
           $("#region").text(region);
-          $("#callingCode").html(`<h1>${callingCodes}</h1>`);
-          $("#time-zone").text(timezones);
+          $("#callingCode").html(`<h1 style = "font-size:64px">+${callingCodes}</h1>`);
+          $("#time-zone").text(timezones[0]);
           $("#languages").text(languages[0]['nativeName']);
           $('#flag').css({ 'background-image': `url(${flags.svg})` });
           $("#population").text(population);
@@ -30,15 +30,14 @@ $(() => {
       </iframe>`)
         //get data weather 
           $.get(
-            `http://api.weatherapi.com/v1/current.json?key=
-            7f2465febfaf4cf5884193545232301&q=${capital}&aqi=no`, function (weatherData) {
-              console.log(weatherData);
-              const { wind: { speed }, current, visibility,weather} = weatherData
-              $("#windSpeed").text(speed)
-              $("#humidity").text(humidity)
-              $("#temperature").text(current['temp_c'])
-              $("#visibility").text(visibility)
-              $("#icon").html(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="12" height="12"><path d="M4.855.708c.5-.896 1.79-.896 2.29 0l4.675 8.351a1.312 1.312 0 0 1-1.146 1.954H1.33A1.313 1.313 0 0 1 .183 9.058ZM7 7V3H5v4Zm-1 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path></svg>`)
+            `https://api.openweathermap.org/data/2.5/weather?q=${capital}&APPID=3ef5728414414623794036f295042ac2`, function (weatherData) {
+              const { wind: { speed }, main: {humidity, temp}, visibility,weather} = weatherData
+              $("#windSpeed").text(speed);
+              $("#humidity").text(humidity);
+              $("#temperature").text(Math.ceil(temp - 273));
+              $("#visibility").text(visibility);
+              console.log(weather[0]['description']);
+              $("#icon").html(`<i class="fa-light fa-clouds"></i>`);
 
             }
           );

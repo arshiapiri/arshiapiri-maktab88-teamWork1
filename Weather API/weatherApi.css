@@ -5,8 +5,7 @@
  }
 
  body {
-    background-image: url("./2262130.jpg");
-    background-color: #cccccc;
+    background-color: #252525;
  }
 
  #flag {
@@ -14,7 +13,6 @@
     background-position: center;
     background-repeat: none;
     background-size: cover;
-    opacity: .5;
  }
 
  .icon {
@@ -55,6 +53,6 @@
  width: 100%;
  height: 250px;
 }
-.weather{
-   height: 400px;
+.boxWeather{
+   height: 350px;
 }
