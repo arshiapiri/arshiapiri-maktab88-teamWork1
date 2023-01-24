@@ -24,39 +24,40 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <!--start: Select Country Box-->
-                <select onchange="putCountryInfo()" id="selector"  class=" form-select" aria-label="Default select example">
-                    <option selected>--- Choose  Country ---</option>
-                  </select>
+                <select id="selector" class=" form-select" aria-label="Default select example">
+                    <option selected>--- Choose Country ---</option>
+                </select>
                 <!--end: Select Country Box-->
 
-                </div>
             </div>
-        </nav>
+    </div>
+    </nav>
     </div>
     <!-- Nav Bar End -->
     <div class="container-xxl mt-3 my-3 main-content">
         <div class="row gy-4 align-items-strech">
             <div class="col-lg-4 col-md-6 col-12">
-                <div class="card shadow ps-2">
+                <div class="card shadow ps-2" id="box">
                     <div>
-                        <h4 ><span>Country:  </span> <span id="country" >---</span></h4>
-                        <p><span>Native Name:  </span> <span id="NativeName" >---</span></p>
-                        <p><span>Capital:  </span> <span id="capital" >---</span></p>
-                        <p><span>Region:  </span> <span id="region" >---</span></p>
-                        <p><span>Population:  </span> <span id="population" >---</span></p>
-                        <p><span>Languages: </span> <span id="languages" >---</span></p>
-                        <p><span>Time-zone:  </span> <span id="time-zone" >---</span></p>
+                        <h4><span class="fontSpan">Country: </span> <span id="country">---</span></h4>
+                        <p><span class="fontSpan">Capital: </span> <span id="capital">---</span></p>
+                        <p><span class="fontSpan">Languages: </span> <span id="languages">---</span></p>
+                        <p><span class="fontSpan">Region: </span> <span id="region">---</span></p>
+                        <p><span class="fontSpan">Native Name: </span> <span id="NativeName">---</span></p>
+                        <p><span class="fontSpan">Population: </span> <span id="population">---</span></p>
+                        <p><span class="fontSpan">Time-zone: </span> <span id="time-zone">---</span></p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-12">
-                <div class="card shadow ps-2">
-                    <h4>capital weather report</h4>
-                    <div id="icon"></div>
-                    <h4 ><span>wind speeed:  </span> <span id="windSpeed">---</span></h4>
-                    <p><span>temperature:  </span> <span id="temperature">---</span></p>
-                    <p><span>humidity:  </span> <span id="humidity">---</span></p>
-                    <p><span>visibility: </span> <span id="visibility">---</span></p>
+                <div class="card shadow ps-3 boxWeather" id="box">
+                    <h4 class="py-3">capital weather report</h4>
+                    <div class="py-3">
+                        <h4><span class="fontSpan">wind speeed: </span> <span id="windSpeed">---</span></h4>
+                        <p><span class="fontSpan">temperature: </span> <span id="temperature">---</span></p>
+                        <p><span class="fontSpan">humidity: </span> <span id="humidity">---</span></p>
+                        <p><span class="fontSpan">visibility: </span> <span id="visibility">---</span></p>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-5 col-md-6 col-12">
@@ -64,19 +65,19 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-12">
-                <div class="card shadow bg-primary rounded" style="height:100%; width: 100%;">
-                    <h2 class="codeNumber">Calling Code</h2>
-                    <div class="d-flex justify-content-center align-items-center h-100" >
+                <div class="card shadow rounded" id="box" style="height:100%; width: 100%;">
+                    <h1 class="codeNumber">Calling Code</h1>
+                    <div class="d-flex justify-content-center align-items-center h-100">
                         <div>
-                        <p  id="callingCode" ></p>
+                            <p id="callingCode"></p>
                         </div>
 
                     </div>
-                    
+
                 </div>
             </div>
             <div class="col-lg-8 col-md-12 col-12">
-                <div class="card shadow">
+                <div class="card shadow" id="box">
                     <div class="mapouter">
                     </div>
                 </div>
