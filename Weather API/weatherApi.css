@@ -1,20 +1,39 @@
  * {
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
- body  {
+    font-size:large;
+ }
+
+ body {
     background-image: url("./2262130.jpg");
     background-color: #cccccc;
-  }
-  #flag{
-   height: 350px;
-   background-position: center;
-   background-repeat: none;
-   background-size: cover;
-   }
-   .codeNumber{
-   display: flex;
-   background-color: rgb(255, 255, 255);
-   justify-content: center;
-   text-align: center;
-   }
+ }
+
+ #flag {
+    height: 350px;
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+ }
+
+ .icon {
+    display: flex;
+    justify-content: center;
+ }
+
+ .codeNumber {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    text-align: center;
+ }
+
+ #callingCode {
+    font-size: 48px;
+ }
+
+ #power {
+    display: flex;
+    justify-content: center;
+    color: white;
+ }

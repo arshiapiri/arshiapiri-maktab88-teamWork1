@@ -17,7 +17,7 @@
     <div>
         <nav class="navbar navbar-expand-lg navbar-dark bg-Secondary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">weather</a>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -34,8 +34,8 @@
         </nav>
     </div>
     <!-- Nav Bar End -->
-    <div class="container-xl mt-3 my-3">
-        <div class="row gy-4">
+    <div class="container-xxl mt-3 my-3 main-content">
+        <div class="row gy-4 align-items-strech">
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="card shadow ps-2">
                     <div>
@@ -49,30 +49,36 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-12"><i class="fa-regular fa-clouds"></i>
+            <div class="col-lg-3 col-md-6 col-12">
                 <div class="card shadow ps-2">
                     <h4>capital weather report</h4>
-                    <div><i class="fa-solid fa-cloud fa-5x"></i></div>
+                    <div id="icon"></div>
                     <h4 ><span>wind speeed:  </span> <span id="windSpeed">---</span></h4>
                     <p><span>temperature:  </span> <span id="temperature">---</span></p>
                     <p><span>humidity:  </span> <span id="humidity">---</span></p>
                     <p><span>visibility: </span> <span id="visibility">---</span></p>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-12">
+            <div class="col-lg-5 col-md-6 col-12">
                 <div class="card shadow" id="flag" style="height:100%; width: 100%;">
                 </div>
             </div>
-            <div class="col-lg-8 col-md-6 col-12" id="mapBody">
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="card shadow bg-primary rounded" style="height:100%; width: 100%;">
+                    <h2 class="codeNumber">Calling Code</h2>
+                    <div class="d-flex justify-content-center align-items-center h-100" >
+                        <div>
+                        <p  id="callingCode" ></p>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12 col-12">
                 <div class="card shadow">
                     <div class="mapouter">
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="card shadow bg-primary" style="height:100%; width: 100%;">
-                    <h2 class="codeNumber">calling code</h2>
-                    <p id="callingCode" class="d-flex justify-content-center align-items-center"></p>
                 </div>
             </div>
         </div>
