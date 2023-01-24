@@ -30,6 +30,7 @@ $(() => {
         //get data weather 
           $.get(
             `https://api.openweathermap.org/data/2.5/weather?q=${capital}&APPID=3ef5728414414623794036f295042ac2`, function (weatherData) {
+              console.log(weatherData);
               const { wind: { speed }, main: {humidity, temp}, visibility} = weatherData
               $("#windSpeed").text(speed)
               $("#humidity").text(humidity)
