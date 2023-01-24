@@ -1,5 +1,3 @@
-
-
 $(() => {
     $.get("https://restcountries.com/v2/all", function (data) {
       data.forEach((item) => {
@@ -18,6 +16,8 @@ $(() => {
             $("#NativeName").text(nativeName)
             $("#capital").text(capital)
             $("#region").text(region)
+            console.log(languages[0]);
+            $("#languages").text(languages[0]['nativeName'])
             $("#population").text(population)
 
             $(".mapouter").html(`<iframe width="100%" height="250"
