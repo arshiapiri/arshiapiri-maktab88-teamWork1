@@ -11,6 +11,9 @@ $(() => {
   $("#selector").change(function () {
     $.get("https://restcountries.com/v2/all", function (data) {
       data.forEach((element) => {
+        if($("#selector").val()=== "--- Choose Country ---"){
+          $(".main-content").hide();
+        }
         //get data country 
         const { name, nativeName, capital, region, population, timezones, flags, languages, callingCodes } = element;
         if (name === $("#selector").val()) {
@@ -24,21 +27,38 @@ $(() => {
           $('#flag').css({ 'background-image': `url(${flags.svg})` });
           $("#population").text(population);
           
-          $(".mapouter").html(`<iframe class="myMap"
+          $(".mapouter").html(`<iframe id="myMap"
           src="https://maps.google.com/maps?q=${capital}=&z=13&ie=UTF8&iwloc=&output=embed"
           frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
       </iframe>`)
         //get data weather 
+        
+        // START: *icon* Rendering from *weatherapi*
+        $.ajax({
+          type: 'get',
+          url: `http://api.weatherapi.com/v1/current.json?key=
+          7f2465febfaf4cf5884193545232301&q=${capital}&aqi=no`,
+          dataType: 'json',
+          async:false,
+          success: function (response) {
+            
+            $("#weatherConditionIcon").html(`<img style="width:100%" src="https:${response.current.condition.icon}" class="">`);
+          },
+          error: function(err) {
+            console.log(err);
+          }
+        
+        });
+
+        //END: icno Renderind
+
           $.get(
             `https://api.openweathermap.org/data/2.5/weather?q=${capital}&APPID=3ef5728414414623794036f295042ac2`, function (weatherData) {
               const { wind: { speed }, main: {humidity, temp}, visibility,weather} = weatherData
               $("#windSpeed").text(speed);
               $("#humidity").text(humidity);
-              $("#temperature").text(Math.ceil(temp - 273));
+              $("#temperature").text(Math.trunc(temp - 273));
               $("#visibility").text(visibility);
-              console.log(weather[0]['description']);
-              $("#icon").html(`<i class="fa-light fa-clouds"></i>`);
-
             }
           );
         }
@@ -58,6 +78,7 @@ let theme = "dark";
   const root = document.querySelector(":root");
   const container = document.getElementsByClassName("theme-container")[0];
   const themeIcon = document.getElementById("theme-icon");
+  const myMap = document.getElementById("myMap");
   container.addEventListener("click", setTheme);
   function setTheme() {
     switch (theme) {
